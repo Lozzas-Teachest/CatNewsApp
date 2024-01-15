@@ -1,17 +1,15 @@
 package com.example.catnews
 
 import android.content.Intent
-import android.provider.Telephony.Mms.Intents
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.catnews.model.NewsIndexItem
 
-class NewsIndexCustomAdapter(private val dataSet: Array<String>, private val descriptionData: Array<String>)
+class NewsIndexCustomAdapter(private val newsIndexItem: List<NewsIndexItem>)
     : RecyclerView.Adapter<NewsIndexCustomAdapter.ViewHolder>(){
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textNewsItemHeading: TextView
@@ -31,13 +29,13 @@ class NewsIndexCustomAdapter(private val dataSet: Array<String>, private val des
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.textNewsItemHeading.text = dataSet[position]
-        holder.textNewsItemDescription.text = descriptionData[position]
+        holder.textNewsItemHeading.text = newsIndexItem[position].data[position].headline
+        holder.textNewsItemDescription.text = newsIndexItem[position].data[position].teaserText
         holder.newsItemCard.setOnClickListener {
             val intent = Intent(holder.itemView.context, StoryPageActivity::class.java)
             holder.itemView.context.startActivity(intent)
         }
     }
 
-    override fun getItemCount() = dataSet.size
+    override fun getItemCount() = newsIndexItem.size
 }

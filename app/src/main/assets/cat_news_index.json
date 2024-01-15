@@ -1,0 +1,99 @@
+{
+  "title": "Sky Cat News",
+  "data": [
+    {
+      "id": "1",
+      "type": "story",
+      "headline": "Cats are great",
+      "teaserText": "This has been known for a long time since ancient Egypt",
+      "creationDate": "2020-11-18T00:00:00Z",
+      "modifiedDate": "2020-11-19T00:00:00Z",
+      "teaserImage": {
+        "_links": {
+          "url": {
+            "href": "",
+            "templated": true,
+            "type": "image/jpeg"
+          }
+        },
+        "accessibilityText": "Image content description"
+      }
+    },
+    {
+      "id": "2",
+      "type": "story",
+      "headline": "Cat gets stuck in tree",
+      "teaserText": "Rescuers were sent to get cat out of tree in Leeds",
+      "creationDate": "2020-11-18T00:00:00Z",
+      "modifiedDate": "2020-11-19T00:00:00Z",
+      "teaserImage": {
+        "_links": {
+          "url": {
+            "href": "",
+            "templated": true,
+            "type": "image/jpeg"
+          }
+        },
+        "accessibilityText": "Image content description"
+      }
+    },
+    {
+      "type": "advert",
+      "url": "advert/url"
+    },
+    {
+      "id": "3",
+      "type": "weblink",
+      "headline": "Weblink headline",
+      "weblinkUrl": "weblink url",
+      "creationDate": "2020-11-18T00:00:00Z",
+      "modifiedDate": "2020-11-19T00:00:00Z",
+      "teaserImage": {
+        "_links": {
+          "url": {
+            "href": "",
+            "templated": true,
+            "type": "image/jpeg"
+          }
+        },
+        "accessibilityText": "Image content description"
+      }
+    },
+    {
+      "id": "4",
+      "type": "story",
+      "headline": "Cats good for health",
+      "teaserText": "Proven they de-stress in recent research",
+      "creationDate": "2020-11-18T00:00:00Z",
+      "modifiedDate": "2020-11-19T00:00:00Z",
+      "teaserImage": {
+        "_links": {
+          "url": {
+            "href": "",
+            "templated": true,
+            "type": "image/jpeg"
+          }
+        },
+        "accessibilityText": "Image content description"
+      }
+    },
+    {
+      "id": "5",
+      "type": "weblink",
+      "headline": "Weblink headline",
+      "weblinkUrl": "",
+      "creationDate": "2020-11-18T00:00:00Z",
+      "modifiedDate": "2020-11-19T00:00:00Z",
+      "teaserImage": {
+        "_links": {
+          "url": {
+            "href": "",
+            "templated": true,
+            "type": "image/jpeg"
+          }
+        },
+        "accessibilityText": "Image content description"
+      }
+    }
+  ]
+}
