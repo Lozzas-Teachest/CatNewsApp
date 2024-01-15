@@ -11,8 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        val catDataSet = arrayOf("Cats are great", "cats are awesome", "buy a cat")
+        val catDataSet = arrayOf("Cats are great", "cats rule", "buy a cat", "cat news", "Cats! A movie")
         val newsIndexCustomAdapter = NewsIndexCustomAdapter(catDataSet)
 
         val catNewsRecyclerView: RecyclerView = findViewById(R.id.newsfeed_recycler_view)
