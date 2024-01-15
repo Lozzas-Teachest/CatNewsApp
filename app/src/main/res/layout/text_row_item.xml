@@ -6,21 +6,31 @@
     android:paddingBottom="10dp">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/recycler_card_view_item"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:clickable="true">
 
                 <ImageView
+                    android:id="@+id/cat_news_image"
                     android:layout_width="120dp"
-                    android:contentDescription="@string/an_image_of_a_tortoiseshell_cat"
-                    android:src="@drawable/xelda"
+                    android:layout_height="150dp"
                     android:layout_gravity="start"
-                    android:layout_height="150dp"/>
+                    android:contentDescription="@string/an_image_of_a_tortoiseshell_cat"
+                    android:src="@drawable/xelda" />
 
                 <TextView
-                    android:id="@+id/news_text_item"
-                    android:layout_width="128dp"
+                    android:id="@+id/news_item_heading"
+                    android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:layout_marginLeft="155dp"/>
+                    android:layout_marginStart="155dp"/>
+
+                <TextView
+                    android:id="@+id/news_item_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="155dp"/>
 
         </androidx.cardview.widget.CardView>
 </FrameLayout>
