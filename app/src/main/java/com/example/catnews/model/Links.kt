@@ -1,7 +1,8 @@
 package com.example.catnews.model
 
 data class Links(
-    val _links: Detail
+    val _links: Detail,
+    val accessibilityText: String
 )
 
 data class Detail(

@@ -13,6 +13,6 @@ class JsonParser {
 
     fun parseJsonToModel(jsonString: String): List<NewsIndexItem> {
         val gson = Gson()
-        return gson.fromJson(jsonString, object : TypeToken<List<NewsIndexItem>>() {}.type)
+        return gson.fromJson(jsonString, object : TypeToken<List<NewsIndexItem>>(){}.type)
     }
 }

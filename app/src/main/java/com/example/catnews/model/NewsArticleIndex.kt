@@ -6,5 +6,6 @@ data class NewsArticleIndex(
     val headline: String,
     val teaserText: String,
     val creationDate: String,
+    val modifiedDate: String,
     val teaserImage: Links,
 )
