@@ -9,7 +9,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.catnews.model.NewsIndexItem
 
-class NewsIndexCustomAdapter(private val newsIndexItem: List<NewsIndexItem>)
+class NewsIndexCustomAdapter(private val newsIndexItem: NewsIndexItem)
     : RecyclerView.Adapter<NewsIndexCustomAdapter.ViewHolder>(){
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textNewsItemHeading: TextView
@@ -29,13 +29,13 @@ class NewsIndexCustomAdapter(private val newsIndexItem: List<NewsIndexItem>)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.textNewsItemHeading.text = newsIndexItem[position].data[position].headline
-        holder.textNewsItemDescription.text = newsIndexItem[position].data[position].teaserText
+        holder.textNewsItemHeading.text = newsIndexItem.data[position].headline
+        holder.textNewsItemDescription.text = newsIndexItem.data[position].teaserText
         holder.newsItemCard.setOnClickListener {
             val intent = Intent(holder.itemView.context, StoryPageActivity::class.java)
             holder.itemView.context.startActivity(intent)
         }
     }
 
-    override fun getItemCount() = newsIndexItem.size
+    override fun getItemCount() = newsIndexItem.data.size
 }

@@ -11,8 +11,8 @@ class JsonParser {
         return context.assets.open(fileName).bufferedReader().use { it.readText() }
     }
 
-    fun parseJsonToModel(jsonString: String): List<NewsIndexItem> {
+    fun parseJsonToModel(jsonString: String): NewsIndexItem {
         val gson = Gson()
-        return gson.fromJson(jsonString, object : TypeToken<List<NewsIndexItem>>(){}.type)
+        return gson.fromJson(jsonString, object : TypeToken<NewsIndexItem>(){}.type)
     }
 }
