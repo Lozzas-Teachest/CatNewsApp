@@ -49,5 +49,6 @@ dependencies {
     implementation("com.google.code.gson:gson:2.7")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:5.1.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
