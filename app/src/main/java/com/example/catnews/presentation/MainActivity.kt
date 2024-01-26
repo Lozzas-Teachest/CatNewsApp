@@ -1,10 +1,12 @@
-package com.example.catnews
+package com.example.catnews.presentation
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.catnews.json_parser.JsonParser
+import com.example.catnews.R
 
 class MainActivity : AppCompatActivity() {
 

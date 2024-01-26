@@ -1,4 +1,4 @@
-package com.example.catnews
+package com.example.catnews.presentation
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.catnews.R
 import com.example.catnews.model.NewsIndexItem
 
 class NewsIndexCustomAdapter(private val newsIndexItem: NewsIndexItem)
@@ -31,6 +32,9 @@ class NewsIndexCustomAdapter(private val newsIndexItem: NewsIndexItem)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.textNewsItemHeading.text = newsIndexItem.data[position].headline
         holder.textNewsItemDescription.text = newsIndexItem.data[position].teaserText
+        if (newsIndexItem.data[position].type == "advert") {
+            holder.textNewsItemHeading.text = newsIndexItem.data[position].type
+        }
         holder.newsItemCard.setOnClickListener {
             val intent = Intent(holder.itemView.context, StoryPageActivity::class.java)
             holder.itemView.context.startActivity(intent)

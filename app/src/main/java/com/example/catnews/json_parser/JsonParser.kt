@@ -1,4 +1,4 @@
-package com.example.catnews
+package com.example.catnews.json_parser
 
 import android.content.Context
 import com.example.catnews.model.NewsIndexItem
