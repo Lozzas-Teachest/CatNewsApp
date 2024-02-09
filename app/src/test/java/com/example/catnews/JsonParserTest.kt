@@ -15,6 +15,7 @@ class JsonParserTest {
         val newsIndexItem = jsonParser.parseJsonToModel(jsonTestString)
         //assert
         assertEquals(newsIndexItem.data[0].headline, "Story Headline")
+        assertEquals(newsIndexItem.data.size, 1)
     }
 
     companion object {

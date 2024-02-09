@@ -24,6 +24,8 @@ class NewsIndexCustomAdapter(private val newsIndexItem: NewsIndexItem)
         }
     }
 
+    private val newsIndexAdapterUtility = NewsIndexAdapterUtility()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.text_row_item, parent, false)
         return ViewHolder(view)
@@ -32,13 +34,9 @@ class NewsIndexCustomAdapter(private val newsIndexItem: NewsIndexItem)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.textNewsItemHeading.text = newsIndexItem.data[position].headline
         holder.textNewsItemDescription.text = newsIndexItem.data[position].teaserText
-        if (newsIndexItem.data[position].type == "advert") {
-            holder.textNewsItemHeading.text = newsIndexItem.data[position].type
-        }
-        holder.newsItemCard.setOnClickListener {
-            val intent = Intent(holder.itemView.context, StoryPageActivity::class.java)
-            holder.itemView.context.startActivity(intent)
-        }
+
+        newsIndexAdapterUtility.insertAdvert(holder, newsIndexItem, position)
+        newsIndexAdapterUtility.moveUserToStoryPageOnClick(holder)
     }
 
     override fun getItemCount() = newsIndexItem.data.size
