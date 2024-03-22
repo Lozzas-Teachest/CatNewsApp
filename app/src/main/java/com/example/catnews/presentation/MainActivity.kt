@@ -1,6 +1,7 @@
 package com.example.catnews.presentation
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,5 +24,12 @@ class MainActivity : AppCompatActivity() {
         catNewsRecyclerView.adapter = newsIndexCustomAdapter
 
         catNewsRecyclerView.layoutManager = LinearLayoutManager(baseContext)
+
+        catNewsRecyclerView.setRecyclerListener {
+            it.itemView.setOnClickListener {
+                val intent = Intent(applicationContext, StoryPageActivity::class.java)
+                applicationContext.startActivity(intent)
+            }
+        }
     }
 }

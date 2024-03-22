@@ -36,7 +36,6 @@ class NewsIndexCustomAdapter(private val newsIndexItem: NewsIndexItem)
         holder.textNewsItemDescription.text = newsIndexItem.data[position].teaserText
 
         newsIndexAdapterUtility.insertAdvert(holder, newsIndexItem, position)
-        newsIndexAdapterUtility.moveUserToStoryPageOnClick(holder)
     }
 
     override fun getItemCount() = newsIndexItem.data.size

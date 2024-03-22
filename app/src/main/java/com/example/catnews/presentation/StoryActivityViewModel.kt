@@ -3,8 +3,6 @@ package com.example.catnews.presentation
 import android.content.Context
 import android.content.Intent
 import android.view.View
-import android.widget.Button
-import com.example.catnews.R
 import com.example.catnews.json_parser.JsonParser
 import com.example.catnews.model.NewsIndexItem
 
