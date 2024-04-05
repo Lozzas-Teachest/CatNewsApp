@@ -47,4 +47,5 @@
     </string>
     <string name="an_image_of_a_tortoiseshell_cat">An image of a tortoiseshell cat</string>
     <string name="title_activity_story_page">StoryPageActivity</string>
+    <string name="loading">Loading</string>
 </resources>

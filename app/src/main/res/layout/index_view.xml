@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.IndexActivity">
+
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="226dp"
+        android:layout_height="69dp"
+        android:text="@string/sky_cat_news"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/large_news_item_card"
+        android:layout_width="365dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/newsfeed_recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_title"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/cat_news_image_large_card"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_gravity="start"
+            android:contentDescription="@string/an_image_of_a_tortoiseshell_cat"
+            android:src="@drawable/xelda" />
+
+        <TextView
+            android:id="@+id/news_item_heading_large_card"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="155dp" />
+
+        <TextView
+            android:id="@+id/news_item_description_large_card"
+            android:layout_width="match_parent"
+            android:layout_height="143dp"
+            android:layout_marginStart="155dp"
+            android:layout_marginTop="40dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/newsfeed_recycler_view"
+        android:layout_width="379dp"
+        android:layout_height="389dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_title"
+        app:layout_constraintVertical_bias="0.928"
+        tools:layout_editor_absoluteX="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
