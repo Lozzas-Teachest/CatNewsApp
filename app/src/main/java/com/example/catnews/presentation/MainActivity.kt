@@ -10,24 +10,23 @@ import com.example.catnews.R
 
 class MainActivity : AppCompatActivity() {
 
-
-
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    }
-
-    override fun onStart() {
-        super.onStart()
         val button: Button = findViewById(R.id.launch_button)
+
         button.setOnClickListener{
             launchIndexActivity()
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+    }
+
     private fun launchIndexActivity() {
         val intent = Intent(this, IndexActivity::class.java)
-        this.startActivity(intent)
+        startActivity(intent)
     }
 }

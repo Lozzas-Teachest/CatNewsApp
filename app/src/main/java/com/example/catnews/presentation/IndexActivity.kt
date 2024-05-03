@@ -10,8 +10,8 @@ import com.example.catnews.json_parser.JsonParser
 
 class IndexActivity: AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
         setContentView(R.layout.index_view)
         val jsonParser = JsonParser()
