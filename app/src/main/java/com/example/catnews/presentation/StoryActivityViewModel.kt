@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.view.View
 import com.example.catnews.json_parser.JsonParser
-import com.example.catnews.model.NewsIndexItem
+import com.example.catnews.model.Story
 
 class StoryActivityViewModel {
 
@@ -17,8 +17,8 @@ class StoryActivityViewModel {
         }
     }
 
-    fun loadStoryFromJson(context: Context): NewsIndexItem {
+    fun loadStoryFromJson(context: Context): Story {
         val jsonString = jsonParser.readJsonFromAssets(context, "sample_story1.json")
-        return jsonParser.parseJsonToModel(jsonString)
+        return jsonParser.parseJsonToStory(jsonString)
     }
 }

@@ -2,6 +2,7 @@ package com.example.catnews.json_parser
 
 import android.content.Context
 import com.example.catnews.model.NewsIndexItem
+import com.example.catnews.model.Story
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
@@ -14,5 +15,10 @@ class JsonParser {
     fun parseJsonToModel(jsonString: String): NewsIndexItem {
         val gson = Gson()
         return gson.fromJson(jsonString, object : TypeToken<NewsIndexItem>(){}.type)
+    }
+
+    fun parseJsonToStory(jsonString: String): Story {
+        val gson = Gson()
+        return gson.fromJson(jsonString, object : TypeToken<Story>(){}.type)
     }
 }

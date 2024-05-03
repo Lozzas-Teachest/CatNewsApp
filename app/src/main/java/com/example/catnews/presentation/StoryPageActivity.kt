@@ -13,6 +13,12 @@ class StoryPageActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.story_page_view)
 
+        val data = storyViewModel.loadStoryFromJson(this)
+        val headline: TextView = findViewById(R.id.storyHeadlineTextview)
+        headline.text = data.headline
+
+        val storyContent: TextView = findViewById(R.id.storyContentTextView)
+        storyContent.text = data.contents[0].text
     }
 
     override fun onStart() {
