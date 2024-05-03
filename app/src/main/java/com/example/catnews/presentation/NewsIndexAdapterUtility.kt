@@ -1,5 +1,6 @@
 package com.example.catnews.presentation
 
+import android.content.Context
 import android.content.Intent
 import com.example.catnews.model.NewsIndexItem
 
@@ -10,10 +11,10 @@ class NewsIndexAdapterUtility {
         }
     }
 
-    fun moveUserToStoryPageOnClick(holder: NewsIndexCustomAdapter.ViewHolder) {
+    fun moveUserToStoryPageOnClick(holder: NewsIndexCustomAdapter.ViewHolder, context: Context) {
         holder.newsItemCard.setOnClickListener {
-            val intent = Intent(holder.itemView.context, StoryPageActivity::class.java)
-            holder.itemView.context.startActivity(intent)
+            val intent = Intent(context, StoryPageActivity::class.java)
+            context.startActivity(intent)
         }
     }
 }

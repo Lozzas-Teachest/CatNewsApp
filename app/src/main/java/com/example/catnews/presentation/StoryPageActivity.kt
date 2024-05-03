@@ -9,16 +9,14 @@ class StoryPageActivity: AppCompatActivity() {
 
     private val storyViewModel: StoryActivityViewModel = StoryActivityViewModel()
 
-    private val headlineText: TextView = findViewById(R.id.storyHeadlineTextview)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.story_page_view)
+
     }
 
     override fun onStart() {
         super.onStart()
         storyViewModel.handleUserClickingBackButton(findViewById(R.id.storyBackButton), this)
     }
-
-
 }

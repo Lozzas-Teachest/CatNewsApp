@@ -12,7 +12,7 @@ class StoryActivityViewModel {
 
     fun handleUserClickingBackButton(button: View, context: Context) {
         button.setOnClickListener {
-            val intent = Intent(context, MainActivity::class.java)
+            val intent = Intent(context, IndexActivity::class.java)
             context.startActivity(intent)
         }
     }
