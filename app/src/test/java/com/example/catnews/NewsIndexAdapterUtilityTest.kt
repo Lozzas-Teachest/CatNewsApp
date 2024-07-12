@@ -2,8 +2,8 @@ package com.example.catnews
 
 import android.widget.TextView
 import com.example.catnews.json_parser.JsonParser
-import com.example.catnews.presentation.NewsIndexAdapterUtility
-import com.example.catnews.presentation.NewsIndexCustomAdapter
+import com.example.catnews.adapter.NewsIndexAdapterUtility
+import com.example.catnews.adapter.NewsIndexCustomAdapter
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

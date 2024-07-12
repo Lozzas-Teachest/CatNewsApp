@@ -1,7 +1,8 @@
-package com.example.catnews.presentation
+package com.example.catnews.adapter
 
 import android.content.Context
 import android.content.Intent
+import com.example.catnews.activity.StoryPageActivity
 import com.example.catnews.model.NewsIndexItem
 
 class NewsIndexAdapterUtility {

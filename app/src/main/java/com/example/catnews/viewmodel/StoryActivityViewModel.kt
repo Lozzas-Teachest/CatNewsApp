@@ -1,14 +1,14 @@
-package com.example.catnews.presentation
+package com.example.catnews.viewmodel
 
 import android.content.Context
 import android.content.Intent
 import android.view.View
 import com.example.catnews.json_parser.JsonParser
 import com.example.catnews.model.Story
+import com.example.catnews.activity.IndexActivity
+import javax.inject.Inject
 
-class StoryActivityViewModel {
-
-    private val jsonParser: JsonParser = JsonParser()
+class StoryActivityViewModel @Inject constructor(private val jsonParser: JsonParser) {
 
     fun handleUserClickingBackButton(button: View, context: Context) {
         button.setOnClickListener {

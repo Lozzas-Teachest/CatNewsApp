@@ -1,15 +1,20 @@
-package com.example.catnews.presentation
+package com.example.catnews.activity
 
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.catnews.R
+import com.example.catnews.CatNewsApplication
+import com.example.catnews.viewmodel.StoryActivityViewModel
+import javax.inject.Inject
 
 class StoryPageActivity: AppCompatActivity() {
 
-    private val storyViewModel: StoryActivityViewModel = StoryActivityViewModel()
+    @Inject
+    lateinit var storyViewModel: StoryActivityViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        (application as CatNewsApplication).appComponent.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.story_page_view)
 

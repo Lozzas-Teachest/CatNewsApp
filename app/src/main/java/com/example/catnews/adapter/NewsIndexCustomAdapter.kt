@@ -1,4 +1,4 @@
-package com.example.catnews.presentation
+package com.example.catnews.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

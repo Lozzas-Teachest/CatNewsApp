@@ -1,10 +1,9 @@
-package com.example.catnews.presentation
+package com.example.catnews.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import androidx.annotation.MainThread
 import androidx.appcompat.app.AppCompatActivity
 import com.example.catnews.R
 

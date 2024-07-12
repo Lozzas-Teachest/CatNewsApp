@@ -5,8 +5,9 @@ import com.example.catnews.model.NewsIndexItem
 import com.example.catnews.model.Story
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import javax.inject.Inject
 
-class JsonParser {
+class JsonParser @Inject constructor() {
 
     fun readJsonFromAssets(context: Context, fileName: String): String {
         return context.assets.open(fileName).bufferedReader().use { it.readText() }
